@@ -1,13 +1,159 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+    display: flex;
+}
+#link {
+    color: rgb(46,46,46);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: rgb(43,43,63);
+    color: rgb(255,255,255);
+    text-align: center;
+}
+nav .logo-container,
+nav .controls-container {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+}
+nav .logo-container h1 {
+    width: 20px;
+}
+.dashboard {
+    padding: 30px;
+    width: 100%;
+}
+.dashboard .ticket-container {
+    height: 80vh;
+    overflow: scroll;
+}
+
+.ticket-card {
+    display: flex;
+    width: 100%;
+}
+.ticket-card #link {
+    display: flex;
+    width: 100%;
+}
+.ticket-card #link > * {
+    background-color: rgb(221, 221, 221);
+    margin: 2px;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.ticket-color {
+    width: 15px!important;
+    padding: 10px!important;
+    margin: 2px;
+}
+.ticket-card .avatar-container {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+.ticket-card .img-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.ticket-card .img-container img {
+    width: 100%;
+}
+.ticket-card .status-display {
+    display: flex;
+    justify-content: center;
+}
+.ticket-card .priority-display {
+    display: flex;
+    justify-content: center;
+}
+.ticket-card .priority-display .star-container {
+    display: flex;
+}
+.ticket-card .priority-display h3 {
+    margin: 7px;
+    padding: 0;
+    font-size: 25px;
+}
+.ticket-card .progress-display {
+    min-width: 200px;
+}
+.ticket-card .progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(158,158,158);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.ticket-card .progress-indicator {
+    background-color: rgb(104,104,175);
+    height: 100%;
+}
+.ticket-card .delete-block {
+    background-color: rgb(211,211,211);
+    width: 50px;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.ticket-card .delete-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(61,61,61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255,255,255);
+    cursor: pointer;
+}
+
+.ticket {
+    padding: 30px;
+    width: 100%;
+}
+.ticket .ticket-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.ticket form {
+    display: flex;
+}
+.ticket form section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 500px;
+}
+.ticket form label {
+    margin: 20px 0 0 0;
+}
+.ticket form select,
+.ticket form input {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(218, 218, 218);
+    margin: 5px;
+}
+.ticket form .multiple-input-container {
+    margin: 20px 0 20px 0;
 }
