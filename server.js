@@ -6,8 +6,8 @@ const axios = require('axios')
 const app = express()
 app.use(cors())
 app.use(express.json())
-const url = 'https://46e97204-652a-4020-a044-f5d43c16809d-us-east1.apps.astra.datastax.com/api/rest/v2/namespaces/tickets/collections/tasks'
-const token = 'AstraCS:lsGaPGWZmalaNhRAYAQORYxs:314d0924eeb035530e54c832fe61d7cf9f838f6957ada42276687a2ea558a25a'
+const url = process.env.URL
+const token = process.env.ASTRA_TOKEN
 
 app.get('/tickets', async (req, res) => {
     const options = {
